@@ -1,0 +1,23 @@
+[
+  {
+    "model": "twitter_client.Music",
+    "fields": {
+      "level": 1,
+      "url": "https://open.spotify.com/track/1UyDQh3HBJwL6IxR9mXipZ?si=4aaa1712104a4cf7"
+    }
+  },
+  {
+    "model": "twitter_client.Music",
+    "fields": {
+      "level": 4,
+      "url": "https://open.spotify.com/track/1XZPtZVqcOzzxbYIR7MjQw?si=3b44e75d824548de"
+    }
+  },
+  {
+    "model": "twitter_client.Music",
+    "fields": {
+      "level": 8,
+      "url": "https://open.spotify.com/track/0pqnGHJpmpxLKifKRmU6WP?si=3bd698df96714011"
+    }
+  }
+]
