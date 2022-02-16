@@ -95,13 +95,7 @@ class TwitterActivity(APIView):
                 else:
                     tag_text = f"You're the first one at {message.level.level} today"
                 
-                tweet_text = f"{re.sub('username', f'@{username}', message.level.message)}\n{message.url}"
-
-                # Mention artist if handle is available
-                if message.artist_handle:
-                    tweet_text += f" via @{message.artist_handle}"
-
-                tweet_text += f"\n\n{tag_text}"
+                tweet_text = f"{re.sub('username', f'@{username}', message.level.message)}\n{message.url}\n\n{tag_text}"
 
                 # Post tweet
                 auth = tweepy.OAuth1UserHandler(
