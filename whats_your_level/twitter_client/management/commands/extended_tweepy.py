@@ -25,6 +25,12 @@ class API(API):
             {"url": kwargs.get("url")}
         ).json()
 
+    def deleteWebhook(self, **kwargs):
+        return self.request2(
+            "DELETE",
+            f"https://api.twitter.com/1.1/account_activity/all/{settings.DEV_ENV}/webhooks/{kwargs.get('webhook_id')}.json"
+        ).content
+
     def getWebHooks(self):
         return self.request2(
             "GET",

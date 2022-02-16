@@ -48,7 +48,8 @@ class TwitterActivity(APIView):
             for tweet in data.get("tweet_create_events"):
                 text = tweet.get("text")
                 username = tweet.get("user").get("screen_name")
-                tweet_date = datetime.strptime(tweet.get('created_at'), "%Y-%m-%dT%H:%M:%S.%fZ").replace(tzinfo=timezone.utc)
+                print(tweet.get('created_at'))
+                tweet_date = datetime.strptime(tweet.get('created_at'), "%a %b %d %H:%M:%S %z %Y").replace(tzinfo=timezone.utc)
 
                 level = re.search(r"[0-9]", text)
 

@@ -26,6 +26,7 @@ class Command(BaseCommand):
     def add_arguments(self, parser):
         parser.add_argument('action', type=str)
         parser.add_argument('--url', type=str) # if action is register
+        parser.add_argument('--webhook_id', type=str)
 
     def registerWebHook(self, url):
         webhook = self.api.registerWebHook(
@@ -34,6 +35,14 @@ class Command(BaseCommand):
         print(webhook)
 
         return webhook
+
+    def deleteWebhook(self, webhook_id):
+        response = self.api.deleteWebhook(
+            **{"webhook_id": webhook_id}
+        )
+        print(response)
+
+        return response
 
     def getWebHooks(self):
         webhooks = self.api.getWebHooks()
@@ -45,10 +54,16 @@ class Command(BaseCommand):
         print(sub_list)
         return sub_list
 
+
+    def subscribeToUser(self):
+        response = self.api.subscribeToUser()
+        print(response)
+        return response
+
     def handle(self, *args, **options):
         action = options.get("action")
 
-        if action not in ["register", "list", "subscriptions"]:
+        if action not in ["register", "list", "subscriptions","delete", "subscribe"]:
             print(f"Unrecognized command '{action}'")
             return
 
@@ -58,5 +73,9 @@ class Command(BaseCommand):
             self.getWebHooks()
         elif action == "subscriptions":
             self.getSubscriptions()
+        elif action == "delete":
+            self.deleteWebhook(options.get("webhook_id"))
+        elif action == "subscribe":
+            self.subscribeToUser()
 
         return
