@@ -95,7 +95,7 @@ class TwitterActivity(APIView):
                 else:
                     tag_text = f"You're the first one at {message.level.level} today"
                 
-                tweet_text = f"@{username}{message.level.message}\n{message.url}"
+                tweet_text = f"{re.sub('username', f'@{username}', message.level.message)}\n{message.url}"
 
                 # Mention artist if handle is available
                 if message.artist_handle:
