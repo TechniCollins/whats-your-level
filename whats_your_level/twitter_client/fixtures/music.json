@@ -3,21 +3,436 @@
     "model": "twitter_client.Music",
     "fields": {
       "level": 1,
-      "url": "https://open.spotify.com/track/1UyDQh3HBJwL6IxR9mXipZ?si=4aaa1712104a4cf7"
+      "url": "https://open.spotify.com/track/5aIa2DUAqI459MqttKIGZe?si=a0fb122d5ad9401f",
+      "artist_handle": "Andromamusic"
+    }
+  },
+  {
+    "model": "twitter_client.Music",
+    "fields": {
+      "level": 1,
+      "url": "https://open.spotify.com/track/7v7teR4FtyiZzkc1tX2a4V?si=615ade362aa5462c",
+      "artist_handle": "Klangkarussell"
+    }
+  },
+  {
+    "model": "twitter_client.Music",
+    "fields": {
+      "level": 1,
+      "url": "https://open.spotify.com/track/2y2TNx72H4oE01TkztsAR6?si=d223b0957d3a485f",
+      "artist_handle": "TheAvenerMusic"
+    }
+  },
+  {
+    "model": "twitter_client.Music",
+    "fields": {
+      "level": 1,
+      "url": "https://open.spotify.com/track/18mfe5YtwXeqhbuSABYVCK?si=41316b041034464c",
+      "artist_handle": "janblomqvist_"
+    }
+  },
+  {
+    "model": "twitter_client.Music",
+    "fields": {
+      "level": 1,
+      "url": "https://open.spotify.com/track/6FmgfD3NTbcVH2uh6N2nvX?si=477044f809994604",
+      "artist_handle": "PLANET0FS0UND"
+    }
+  },
+  {
+    "model": "twitter_client.Music",
+    "fields": {
+      "level": 1,
+      "url": "https://open.spotify.com/track/5snyhxAh55A2wlNRH7VVZJ?si=9ead4d89d6474c04",
+      "artist_handle": "Zwette_Music"
+    }
+  },
+  {
+    "model": "twitter_client.Music",
+    "fields": {
+      "level": 1,
+      "url": "https://open.spotify.com/track/5zlC5d5umTrbcX9sLVVxzh?si=06043bb1dc584a76",
+      "artist_handle": "lwatp"
+    }
+  },
+  {
+    "model": "twitter_client.Music",
+    "fields": {
+      "level": 2,
+      "url": "https://open.spotify.com/track/4EeeRPXUAUQHkBxu3g1LxT?si=6bd4d39b3cff4514",
+      "artist_handle": "bbbostonbun"
+    }
+  },
+  {
+    "model": "twitter_client.Music",
+    "fields": {
+      "level": 2,
+      "url": "https://open.spotify.com/track/63SevszngYpZOwf63o61K4?si=fdf8cba8a4154082",
+      "artist_handle": "dennislloyd_"
+    }
+  },
+  {
+    "model": "twitter_client.Music",
+    "fields": {
+      "level": 2,
+      "url": "https://open.spotify.com/track/14d79QOV2pvJHH9vlUfZwJ?si=953c818e8f644f04",
+      "artist_handle": "LFrequencies"
+    }
+  },
+  {
+    "model": "twitter_client.Music",
+    "fields": {
+      "level": 2,
+      "url": "https://open.spotify.com/track/300yG966A2AdlKC5syi3zi?si=10efedadd2194205",
+      "artist_handle": "themicronauts"
+    }
+  },
+  {
+    "model": "twitter_client.Music",
+    "fields": {
+      "level": 2,
+      "url": "https://open.spotify.com/track/1ytIBNI2JSDZU48Zbe9yID?si=86a5f3bf5e634a54",
+      "artist_handle": "fkalkbrenner"
+    }
+  },
+  {
+    "model": "twitter_client.Music",
+    "fields": {
+      "level": 2,
+      "url": "https://open.spotify.com/track/5mpLcXEsk3jjzLFGuNKk5I?si=4c9225b3d5ef43f4",
+      "artist_handle": "MilkyChance"
+    }
+  },
+  {
+    "model": "twitter_client.Music",
+    "fields": {
+      "level": 2,
+      "url": "https://open.spotify.com/track/300yG966A2AdlKC5syi3zi?si=8dc778941d334bd7",
+      "artist_handle": "themicronauts"
+    }
+  },
+  {
+    "model": "twitter_client.Music",
+    "fields": {
+      "level": 3,
+      "url": "https://open.spotify.com/track/5LupwMj1sbMUWYVjHgHube?si=7bc0ea2013064c00",
+      "artist_handle": "Poldoore"
+    }
+  },
+  {
+    "model": "twitter_client.Music",
+    "fields": {
+      "level": 3,
+      "url": "https://open.spotify.com/track/6LC4SYAirU3kqIJ9F3R2z7?si=b7861e7d66e84a81"
+    }
+  },
+  {
+    "model": "twitter_client.Music",
+    "fields": {
+      "level": 3,
+      "url": "https://open.spotify.com/track/1kFu2TuUmsARXGYc2eYXiC?si=968c6a6fbba84b04",
+      "artist_handle": "yve48music"
+    }
+  },
+  {
+    "model": "twitter_client.Music",
+    "fields": {
+      "level": 3,
+      "url": "https://open.spotify.com/track/22LmMYd9Ydssz5Kzafko6q?si=e1d080cefb294c0d"
+    }
+  },
+  {
+    "model": "twitter_client.Music",
+    "fields": {
+      "level": 3,
+      "url": "https://open.spotify.com/track/69uxyAqqPIsUyTO8txoP2M?si=7be59a6d0e474a4e"
+    }
+  },
+  {
+    "model": "twitter_client.Music",
+    "fields": {
+      "level": 3,
+      "url": "https://open.spotify.com/track/57RHMnLMQx8Qz5V6c0E8dF?si=3faf59d3bd5f4846"
     }
   },
   {
     "model": "twitter_client.Music",
     "fields": {
       "level": 4,
-      "url": "https://open.spotify.com/track/1XZPtZVqcOzzxbYIR7MjQw?si=3b44e75d824548de"
+      "url": "https://open.spotify.com/track/4msKR7UIbds7sscfuYYLr0?si=43b4cd614e2043ef"
+    }
+  },
+  {
+    "model": "twitter_client.Music",
+    "fields": {
+      "level": 4,
+      "url": "https://open.spotify.com/track/1waX1HHzae5HDdOVEelbIL?si=52d0c0e3bf65450f"
+    }
+  },
+  {
+    "model": "twitter_client.Music",
+    "fields": {
+      "level": 4,
+      "url": "https://open.spotify.com/track/5F2lWCeBZMxpo6SG1Q3PlL?si=3661c84f1b5445ed"
+    }
+  },
+  {
+    "model": "twitter_client.Music",
+    "fields": {
+      "level": 4,
+      "url": "https://open.spotify.com/track/5dVUSdsePmEKkq4ryfrobU?si=43c601dbe12b49cc"
+    }
+  },
+  {
+    "model": "twitter_client.Music",
+    "fields": {
+      "level": 4,
+      "url": "https://open.spotify.com/track/1JvjXTE1Tcgey8up2uLuPT?si=ff42d0355b154c62"
+    }
+  },
+  {
+    "model": "twitter_client.Music",
+    "fields": {
+      "level": 4,
+      "url": "https://open.spotify.com/track/6HTJZ0TQJVMSKkUGzAOe2h?si=8e2e5a1595c74135"
+    }
+  },
+  {
+    "model": "twitter_client.Music",
+    "fields": {
+      "level": 5,
+      "url": "https://open.spotify.com/track/1CNCmckkTkCoJ8FsuwwL7t?si=9513367c78ab4d9a"
+    }
+  },
+  {
+    "model": "twitter_client.Music",
+    "fields": {
+      "level": 5,
+      "url": "https://open.spotify.com/track/40sBC7tHdvDKyJsExz9QZ6?si=b92f550e23764230"
+    }
+  },
+  {
+    "model": "twitter_client.Music",
+    "fields": {
+      "level": 5,
+      "url": "https://open.spotify.com/track/3q9oTSo64CrjOiPwI4DbWE?si=f9331333dac3415a"
+    }
+  },
+  {
+    "model": "twitter_client.Music",
+    "fields": {
+      "level": 5,
+      "url": "https://open.spotify.com/track/6WbADFqMvR8N5u0BvtsWQE?si=b7d083bd46d14c87"
+    }
+  },
+  {
+    "model": "twitter_client.Music",
+    "fields": {
+      "level": 5,
+      "url": "https://open.spotify.com/track/4KKPV226rJoh2dFRr2drsC?si=2942758fd93e49dd"
+    }
+  },
+  {
+    "model": "twitter_client.Music",
+    "fields": {
+      "level": 5,
+      "url": "https://open.spotify.com/track/0bXpmJyHHYPk6QBFj25bYF?si=0da03389372f4065"
+    }
+  },
+  {
+    "model": "twitter_client.Music",
+    "fields": {
+      "level": 6,
+      "url": "https://open.spotify.com/track/0com9SnOPL3RhiRNU5NBX4?si=74787d13000c462f",
+      "artist_handle": "MetropolitanRec"
+    }
+  },
+  {
+    "model": "twitter_client.Music",
+    "fields": {
+      "level": 6,
+      "url": "https://open.spotify.com/track/0PZDr6dxJhgBjmBZ3w81cr?si=b0022a5300904d3d",
+      "artist_handle": "PetitBiscuit"
+    }
+  },
+  {
+    "model": "twitter_client.Music",
+    "fields": {
+      "level": 6,
+      "url": "https://open.spotify.com/track/3q9oTSo64CrjOiPwI4DbWE?si=33b4171dd8b44d0d",
+      "artist_handle": "BakermatMusic"
+    }
+  },
+  {
+    "model": "twitter_client.Music",
+    "fields": {
+      "level": 6,
+      "url": "https://open.spotify.com/track/7hNx9Dynz2fRO41L9AEVA8?si=1d218888a5d64d0d",
+      "artist_handle": "kanyewest"
+    }
+  },
+  {
+    "model": "twitter_client.Music",
+    "fields": {
+      "level": 6,
+      "url": "https://open.spotify.com/track/0WPPOuw7E3yghfNLRVTY8y?si=37410f2fe0564697",
+      "artist_handle": "Superflumusic"
+    }
+  },
+  {
+    "model": "twitter_client.Music",
+    "fields": {
+      "level": 6,
+      "url": "https://open.spotify.com/track/7BdWYgxHfMo4znov1h3704?si=439a69e5ecd24a41",
+      "artist_handle": "robosonic"
+    }
+  },
+  {
+    "model": "twitter_client.Music",
+    "fields": {
+      "level": 6,
+      "url": "https://open.spotify.com/track/0mBkoM8r7KAQzZij5swTUL?si=d1fc10bb21904e4c",
+      "artist_handle": "empireOfTheSun"
+    }
+  },
+  {
+    "model": "twitter_client.Music",
+    "fields": {
+      "level": 7,
+      "url": "https://open.spotify.com/track/4FvlvcLXj80dqfjrx95L6i?si=e0f474c9ccc74445"
+    }
+  },
+  {
+    "model": "twitter_client.Music",
+    "fields": {
+      "level": 7,
+      "url": "https://open.spotify.com/track/5OMHTqpgGsxiqLQ4L2nBAp?si=22615b4627fe4d84"
+    }
+  },
+  {
+    "model": "twitter_client.Music",
+    "fields": {
+      "level": 7,
+      "url": "https://open.spotify.com/track/1vvNmPOiUuyCbgWmtc6yfm?si=4cc5df18926145eb"
+    }
+  },
+  {
+    "model": "twitter_client.Music",
+    "fields": {
+      "level": 7,
+      "url": "https://open.spotify.com/track/1tNxprI7wf87blRuXUyEvC?si=5a25d1f863d74690"
     }
   },
   {
     "model": "twitter_client.Music",
     "fields": {
       "level": 8,
-      "url": "https://open.spotify.com/track/0pqnGHJpmpxLKifKRmU6WP?si=3bd698df96714011"
+      "url": "https://open.spotify.com/track/0Pxo3J0alsDbf6bZTJ4cHR?si=543c49f2a02b499e"
+    }
+  },
+  {
+    "model": "twitter_client.Music",
+    "fields": {
+      "level": 8,
+      "url": "https://open.spotify.com/track/7gJzu8c7pyNE6t8q09WXWa?si=bddf1e9a898a40ba"
+    }
+  },
+  {
+    "model": "twitter_client.Music",
+    "fields": {
+      "level": 8,
+      "url": "https://open.spotify.com/track/4H6QKvvy9zgIYtLBtCDgu6?si=6c35c1031f294a81"
+    }
+  },
+  {
+    "model": "twitter_client.Music",
+    "fields": {
+      "level": 8,
+      "url": "https://open.spotify.com/track/1i1fxkWeaMmKEB4T7zqbzK?si=ca2d8e41fc644363"
+    }
+  },
+  {
+    "model": "twitter_client.Music",
+    "fields": {
+      "level": 9,
+      "url": "https://open.spotify.com/track/2tW2Kn1IGFFVfRVnQE2UaQ?si=82bbcd341479481a"
+    }
+  },
+  {
+    "model": "twitter_client.Music",
+    "fields": {
+      "level": 9,
+      "url": "https://open.spotify.com/track/2grqPAhRXy6NXufg5cGsBu?si=0ba90c97690346af"
+    }
+  },
+  {
+    "model": "twitter_client.Music",
+    "fields": {
+      "level": 9,
+      "url": "https://open.spotify.com/track/33HddJyP9pUxEBevlyBkEa?si=cc6cf1d33a864582"
+    }
+  },
+  {
+    "model": "twitter_client.Music",
+    "fields": {
+      "level": 9,
+      "url": "https://open.spotify.com/track/4IsHMzDbRE8q5Z4ALsQj3o?si=ebb246594143434c"
+    }
+  },
+  {
+    "model": "twitter_client.Music",
+    "fields": {
+      "level": 9,
+      "url": "https://open.spotify.com/track/0O3dIWoUrDLg2E5qDGx7Cb?si=186a310bfd624ff8"
+    }
+  },
+  {
+    "model": "twitter_client.Music",
+    "fields": {
+      "level": 10,
+      "url": "https://open.spotify.com/track/0ZYQ8J5CmB7EBnFCWwZfaG?si=de2f66d73b1d48d3"
+    }
+  },
+  {
+    "model": "twitter_client.Music",
+    "fields": {
+      "level": 10,
+      "url": "https://open.spotify.com/track/0BNt1E54JDgCc06Ld5oaQ6?si=b4390bcee3b34d66"
+    }
+  },
+  {
+    "model": "twitter_client.Music",
+    "fields": {
+      "level": 10,
+      "url": "https://open.spotify.com/track/6O7qFEXmLQcOsV37wrgJDz?si=7930592383104418"
+    }
+  },
+  {
+    "model": "twitter_client.Music",
+    "fields": {
+      "level": 10,
+      "url": "https://open.spotify.com/track/4Ei691AKbjiGscPcMUdA4s?si=47481c4fa7d6403e"
+    }
+  },
+  {
+    "model": "twitter_client.Music",
+    "fields": {
+      "level": 10,
+      "url": "https://open.spotify.com/track/6B0m2TPxnSMEeVBwkhf3kL?si=f5c01872a1f5472b"
+    }
+  },
+  {
+    "model": "twitter_client.Music",
+    "fields": {
+      "level": 10,
+      "url": "https://open.spotify.com/track/1A6sVuun3GjnRutMi5ORQJ?si=aeea15193ff04629"
+    }
+  },
+  {
+    "model": "twitter_client.Music",
+    "fields": {
+      "level": 10,
+      "url": "https://open.spotify.com/track/0Pxo3J0alsDbf6bZTJ4cHR?si=8fb407ae230b49ae"
     }
   }
-]
+]         

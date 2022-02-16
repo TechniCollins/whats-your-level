@@ -19,6 +19,7 @@ class Level(models.Model):
 class Music(models.Model):
     level = models.ForeignKey(Level, on_delete=models.CASCADE, related_name="music_level")
     url = models.CharField(max_length=1000)
+    artist_handle = models.CharField(max_length=40, null=True) # The Twitter handle of the artist.
 
     def __str__(self):
         return self.url

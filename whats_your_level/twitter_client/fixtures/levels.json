@@ -1,72 +1,83 @@
 [
   {
     "model": "twitter_client.Level",
+    "pk": 1,
     "fields": {
       "level": 1,
-      "message": ",not bad, we like 1's. Here's something to bump you up to a 10"
+      "message": ", \"Once you choose hope, anything is possible.\" – Christopher Reeve Hopefully, this song will help lift you up a bit. Email if you're looing to chat: whatsyourlevel@yahoo.com"
+
     }
   },
   {
     "model": "twitter_client.Level",
+    "pk": 2,
     "fields": {
       "level": 2,
-      "message": ",not bad, we like 2's. Here's something to bump you up to a 10"
+      "message": ", a2️⃣, well at least you're not a 1! Shake it off and crank some tunes.  Jumping from a 2 to a 5 is easy as pie. Lets go!"
     }
   },
   {
     "model": "twitter_client.Level",
+    "pk": 3,
     "fields": {
       "level": 3,
-      "message": ",not bad, we like 3's. Here's something to bump you up to a 10"
+      "message": " nobody wants to be a 3. Tune in below and lets get you up to 6 stat!"
     }
   },
   {
     "model": "twitter_client.Level",
+    "pk": 4,
     "fields": {
       "level": 4,
-      "message": ",not bad, we like 4's. Here's something to bump you up to a 10"
+      "message": ", I'm going to pretend you didn't type that. If you're a 4, you're basically a 5. Lets get you on the winning side. Tune in 👇"
     }
   },
   {
     "model": "twitter_client.Level",
+    "pk": 5,
     "fields": {
       "level": 5,
-      "message": ",not bad, we like 5's. Here's something to bump you up to a 10"
+      "message": " a 5 ey? The middle seat is the worst seat, let's get you into the winning category. Tune in👇"
     }
   },
   {
     "model": "twitter_client.Level",
+    "pk": 6,
     "fields": {
       "level": 6,
-      "message": ",not bad, we like 6's. Here's something to bump you up to a 10"
+      "message": ", a 6? \"Gotta pump those numbers up. Those are rookie numbers in this racket.\" - Mark Hana (@McConaughey)"
     }
   },
   {
     "model": "twitter_client.Level",
+    "pk": 7,
     "fields": {
       "level": 7,
-      "message": ",not bad, we like 7's. Here's something to bump you up to a 10"
+      "message": ", lucky 7. We like 7's. Embrace the goodness and enjoy the day."
     }
   },
   {
     "model": "twitter_client.Level",
+    "pk": 8,
     "fields": {
       "level": 8,
-      "message": ",not bad, we like 8's. Here's something to bump you up to a 10"
+      "message": ", an 8? Now you're talking. What's it going to take to break through to a 9 or a 10? Lets do this!!!"
     }
   },
   {
     "model": "twitter_client.Level",
+    "pk": 9,
     "fields": {
       "level": 9,
-      "message": ",not bad, we like 9's. Here's something to bump you up to a 10"
+      "message": ", a 9? Why not a 10? What's it going to take? LFG!!!!!!!!!!!  Own the day!!!!!"
     }
   },
   {
     "model": "twitter_client.Level",
+    "pk": 10,
     "fields": {
       "level": 10,
-      "message": ",not bad, we like 10's. Here's something to bump you up to a 10"
+      "message": ", oh yeaaa!! 10!! LFG!!!!"
     }
   }
 ]

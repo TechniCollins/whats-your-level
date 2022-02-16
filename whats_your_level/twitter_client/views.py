@@ -11,10 +11,33 @@ from .models import Mention, Music
 
 import re
 
+from django.conf import settings
+
+# Interact with the twitter API
+import tweepy
+from .management.commands.extended_tweepy import API
+
+# Webhook app verification
+import base64
+import hashlib
+import hmac
+
 
 class TwitterActivity(APIView):
     def get(self, request):
-        return
+        # creates HMAC SHA-256 hash from incomming token and your consumer secret
+        sha256_hash_digest = hmac.new(
+            key=bytes(settings.CONSUMER_SECRET, 'utf-8'),
+            msg=bytes(request.GET.get('crc_token'), 'utf-8'),
+            digestmod=hashlib.sha256
+        ).digest()
+
+        # construct response data with base64 encoded hash
+        response = {
+            'response_token': 'sha256=' + base64.b64encode(sha256_hash_digest).decode('ascii')
+        }
+
+        return Response(response, status.HTTP_200_OK)
 
     def post(self, request):
         data = request.data
@@ -35,11 +58,13 @@ class TwitterActivity(APIView):
                 level = int(level.group(0))
 
                 # Get at most 3 people who tweeted the same level today
-                tags = Mention.objects.filter(
-                    level=level,
-                    tweet_date__gte=timezone.now().replace(hour=0, minute=0, second=0),
-                    tweet_date__lte=timezone.now().replace(hour=23, minute=59, second=59)
-                ).exclude(handle=username)[:3]
+                tags = list(
+                    Mention.objects.filter(
+                        level=level,
+                        tweet_date__gte=timezone.now().replace(hour=0, minute=0, second=0),
+                        tweet_date__lte=timezone.now().replace(hour=23, minute=59, second=59)
+                    ).exclude(handle=username).values_list("handle", flat=True).distinct()[:3]
+                )
 
                 # Get music for the given level
                 music = Music.objects.filter(level__level=level).prefetch_related("level")
@@ -58,7 +83,7 @@ class TwitterActivity(APIView):
                 tag_text = ""
 
                 if m:
-                    tag_text = tag_text.join([f", @{x.handle}" for x in tags])
+                    tag_text = tag_text.join([f"@{x}, " for x in tags])
 
                 if tag_text != "" and m==1:
                     tag_text = f"Also meet {tag_text} who was at {message.level.level} today."
@@ -67,14 +92,29 @@ class TwitterActivity(APIView):
                 else:
                     tag_text = f"You're the first one at {message.level.level} today"
                 
-                tweet_text = f"@{username} {message.level.message}\n{message.url}\n{tag_text}"
+                tweet_text = f"@{username}{message.level.message}\n{message.url}"
+
+                # Mention artist if handle is available
+                if message.artist_handle:
+                    tweet_text += f" via @{message.artist_handle}"
+
+                tweet_text += f"\n\n{tag_text}"
+
+                # Post tweet
+                auth = tweepy.OAuth1UserHandler(
+                    settings.CONSUMER_KEY, settings.CONSUMER_SECRET,
+                    settings.ACCESS_TOKEN, settings.ACCESS_SECRET
+                )
+
+                API(auth).update_status(
+                    status=tweet_text
+                    # in_reply_to_status_id=
+                )
 
                 Mention(
                     level=level,
                     handle=username,
                     tweet_date=tweet_date
                 ).save()
-
-                print(tweet_text)
 
         return Response({"message": tweet_text}, status.HTTP_200_OK)

@@ -1,0 +1,25 @@
+curl -H 'Content-Type: application/json' -H 'Accept: application/json' -X POST http://127.0.0.1:8000/api/activity -d '{"user_has_blocked": "yes", "tweet_create_events": [{"created_at": "2022-02-16T07:42:15.000Z", "text": "At a 1 today @WhatsYourLevel", "user": {"screen_name": "TechniCollins"}}]}'
+
+curl -H 'Content-Type: application/json' -H 'Accept: application/json' -X POST http://127.0.0.1:8000/api/activity -d '{"user_has_blocked": "yes", "tweet_create_events": [{"created_at": "2022-02-16T07:42:15.000Z", "text": "At a 2 today @WhatsYourLevel", "user": {"screen_name": "TechniCollins"}}]}'
+
+curl -H 'Content-Type: application/json' -H 'Accept: application/json' -X POST http://127.0.0.1:8000/api/activity -d '{"user_has_blocked": "yes", "tweet_create_events": [{"created_at": "2022-02-16T07:42:15.000Z", "text": "At a 3 today @WhatsYourLevel", "user": {"screen_name": "AllisterMugaisi"}}]}'
+
+curl -H 'Content-Type: application/json' -H 'Accept: application/json' -X POST http://127.0.0.1:8000/api/activity -d '{"user_has_blocked": "yes", "tweet_create_events": [{"created_at": "2022-02-16T07:42:15.000Z", "text": "At a 3 today @WhatsYourLevel", "user": {"screen_name": "SoftLeverTech"}}]}'
+
+curl -H 'Content-Type: application/json' -H 'Accept: application/json' -X POST http://127.0.0.1:8000/api/activity -d '{"user_has_blocked": "yes", "tweet_create_events": [{"created_at": "2022-02-16T07:42:15.000Z", "text": "At a 4 today @WhatsYourLevel", "user": {"screen_name": "TechniCollins"}}]}'
+
+curl -H 'Content-Type: application/json' -H 'Accept: application/json' -X POST http://127.0.0.1:8000/api/activity -d '{"user_has_blocked": "yes", "tweet_create_events": [{"created_at": "2022-02-16T07:42:15.000Z", "text": "At a 5 today @WhatsYourLevel", "user": {"screen_name": "SoftLeverTech"}}]}'
+
+curl -H 'Content-Type: application/json' -H 'Accept: application/json' -X POST http://127.0.0.1:8000/api/activity -d '{"user_has_blocked": "yes", "tweet_create_events": [{"created_at": "2022-02-16T07:42:15.000Z", "text": "At a 6 today @WhatsYourLevel", "user": {"screen_name": "TechniCollins"}}]}'
+
+curl -H 'Content-Type: application/json' -H 'Accept: application/json' -X POST http://127.0.0.1:8000/api/activity -d '{"user_has_blocked": "yes", "tweet_create_events": [{"created_at": "2022-02-16T07:42:15.000Z", "text": "At a 7 today @WhatsYourLevel", "user": {"screen_name": "TechniCollins"}}]}'
+
+curl -H 'Content-Type: application/json' -H 'Accept: application/json' -X POST http://127.0.0.1:8000/api/activity -d '{"user_has_blocked": "yes", "tweet_create_events": [{"created_at": "2022-02-16T07:42:15.000Z", "text": "At a 3 today @WhatsYourLevel", "user": {"screen_name": "TechniCollins"}}]}'
+
+curl -H 'Content-Type: application/json' -H 'Accept: application/json' -X POST http://127.0.0.1:8000/api/activity -d '{"user_has_blocked": "yes", "tweet_create_events": [{"created_at": "2022-02-16T07:42:15.000Z", "text": "At a 8 today @WhatsYourLevel", "user": {"screen_name": "TechniCollins"}}]}'
+
+curl -H 'Content-Type: application/json' -H 'Accept: application/json' -X POST http://127.0.0.1:8000/api/activity -d '{"user_has_blocked": "yes", "tweet_create_events": [{"created_at": "2022-02-16T07:42:15.000Z", "text": "At a 9 today @WhatsYourLevel", "user": {"screen_name": "TechniCollins"}}]}'
+
+curl -H 'Content-Type: application/json' -H 'Accept: application/json' -X POST http://127.0.0.1:8000/api/activity -d '{"user_has_blocked": "yes", "tweet_create_events": [{"created_at": "2022-02-16T07:42:15.000Z", "text": "At a 10 today @WhatsYourLevel", "user": {"screen_name": "TechniCollins"}}]}'
+
+curl -H 'Content-Type: application/json' -H 'Accept: application/json' -X POST http://127.0.0.1:8000/api/activity -d '{"user_has_blocked": "yes", "tweet_create_events": [{"created_at": "2022-02-16T07:42:15.000Z", "text": "At a 5 today @WhatsYourLevel", "user": {"screen_name": "TechniCollins"}}]}'
