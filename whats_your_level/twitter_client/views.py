@@ -91,11 +91,12 @@ class TwitterActivity(APIView):
                 if tag_text != "" and m==1:
                     tag_text = f"Also meet {tag_text} who was at {message.level.level} today."
                 elif tag_text != "" and m > 1:
-                    tag_text = f"Also meet {tag_text} who were at {message.level.level} today." 
-                else:
-                    tag_text = f"You're the first one at {message.level.level} today"
+                    tag_text = f"Also meet {tag_text} who were at {message.level.level} today."
                 
-                tweet_text = f"{re.sub('username', f'@{username}', message.level.message)}\n{message.url}\n\n{tag_text}"
+                tweet_text = f"{re.sub('username', f'@{username}', message.level.message)}\n{message.url}"
+                
+                if tag_text != "":
+                    tweet_text += f"\n\n{tag_text}"
 
                 # Post tweet
                 auth = tweepy.OAuth1UserHandler(
