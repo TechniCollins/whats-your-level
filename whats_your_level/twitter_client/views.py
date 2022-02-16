@@ -98,16 +98,20 @@ class TwitterActivity(APIView):
                 if tag_text != "":
                     tweet_text += f"\n\n{tag_text}"
 
+                print(tweet_text)
+
                 # Post tweet
                 auth = tweepy.OAuth1UserHandler(
                     settings.CONSUMER_KEY, settings.CONSUMER_SECRET,
                     settings.ACCESS_TOKEN, settings.ACCESS_SECRET
                 )
 
-                API(auth).update_status(
+                post_tweet = API(auth).update_status(
                     status=tweet_text,
                     in_reply_to_status_id=tweet_id
                 )
+
+                print(post_tweet)
 
                 Mention(
                     level=level,
