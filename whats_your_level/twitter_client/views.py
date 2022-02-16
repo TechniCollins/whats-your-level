@@ -44,14 +44,16 @@ class TwitterActivity(APIView):
 
         # HANDLE MENTIONS
         # We know it's a mention if it has the 'user_has_blocked' attribute
+        tweet_text = ""
+
         if data.get("user_has_blocked") is not None:
             for tweet in data.get("tweet_create_events"):
+                tweet_id = tweet.get("id")
                 text = tweet.get("text")
                 username = tweet.get("user").get("screen_name")
-                print(tweet.get('created_at'))
                 tweet_date = datetime.strptime(tweet.get('created_at'), "%a %b %d %H:%M:%S %z %Y").replace(tzinfo=timezone.utc)
 
-                level = re.search(r"[0-9]", text)
+                level = re.search(r"10|[1-9]", text)
 
                 if not level:
                     return Response({"message": "No Level"}, status.HTTP_200_OK)
@@ -108,8 +110,8 @@ class TwitterActivity(APIView):
                 )
 
                 API(auth).update_status(
-                    status=tweet_text
-                    # in_reply_to_status_id=
+                    status=tweet_text,
+                    in_reply_to_status_id=tweet_id
                 )
 
                 Mention(
