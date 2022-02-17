@@ -101,5 +101,7 @@ Uncomment the second server block and save file
 ## Connect to Twitter
     
     docker-compose exec web python manage.py webhooks register --url https://yourdomain.com/api/activity
+    
+    curl https://yourdomain.com/twitter-auth/?authenticate
 
-    docker-compose exec web python manage.py webhooks subscribe
+Follow the link returned and give the app permissions.

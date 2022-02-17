@@ -1,6 +1,6 @@
 from django.urls import re_path
-from . import views
+from .views import TwitterActivity
 
 urlpatterns = [
-    re_path('activity', views.TwitterActivity.as_view())
+    re_path('activity', TwitterActivity.as_view())
 ]

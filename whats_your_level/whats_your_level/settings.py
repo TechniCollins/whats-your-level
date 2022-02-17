@@ -148,7 +148,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Twitter Dev Configs
 CONSUMER_KEY = os.environ.get("CONSUMER_KEY")
 CONSUMER_SECRET = os.environ.get("CONSUMER_SECRET")
-ACCESS_TOKEN = os.environ.get("ACCESS_TOKEN")
-ACCESS_SECRET = os.environ.get("ACCESS_SECRET")
-USER_ID = os.environ.get("USER_ID")
-DEV_ENV = os.environ.get("DEV_ENV", "production")
+DEV_ENV = os.environ.get("DEV_ENV")
+CALLBACK_URL = os.environ.get("CALLBACK_URL")

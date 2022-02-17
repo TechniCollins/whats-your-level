@@ -5,9 +5,10 @@ from random import randint
 
 # for API responses
 from rest_framework.response import Response
+from django.http import HttpResponseRedirect
 from rest_framework import status
 
-from .models import Mention, Music
+from .models import Mention, Music, TwitterAuthKey
 
 import re
 
@@ -21,6 +22,52 @@ from .management.commands.extended_tweepy import API
 import base64
 import hashlib
 import hmac
+
+
+class TwitterAuth(APIView):
+    auth = tweepy.OAuthHandler(
+        settings.CONSUMER_KEY,
+        settings.CONSUMER_SECRET,
+        settings.CALLBACK_URL
+    )
+
+    def get(self, request):
+        if "authenticate" in request.GET:
+            # Get redirect URL
+            try:
+                redirect_url = self.auth.get_authorization_url()
+                return Response({"url": redirect_url}, status.HTTP_200_OK)
+            except tweepy.TweepyException as e:
+                return Response({"message": str(e)}, status.HTTP_500_INTERNAL_SERVER_ERROR)
+        elif request.GET.get("oauth_token"):
+            try:
+                auth_token = request.GET['oauth_token']
+                verifier = request.GET['oauth_verifier']
+
+                self.auth.request_token = {'oauth_token': auth_token, 'oauth_token_secret': verifier}
+
+                access_keys = self.auth.get_access_token(verifier)
+
+                # Get user id and save credentials
+                TwitterAuthKey.objects.all().delete()
+                auth_instance = TwitterAuthKey(
+                    access_key=access_keys[0],
+                    access_secret=access_keys[1]
+                )
+
+                self.auth.set_access_token(auth_instance.access_key, auth_instance.access_secret)
+                user_details = API(self.auth, wait_on_rate_limit=True).verify_credentials()                
+                auth_instance.user_id = str(user_details.id)
+                auth_instance.save()
+
+
+                # Subscribe to this user's activity
+                subscription = API(self.auth, wait_on_rate_limit=True).subscribeToUser()
+                print(subscription)
+
+                return Response({"message": "Subscribed to user"}, status.HTTP_200_OK)
+            except Exception as e:
+                return Response({"message": str(e)}, status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
 class TwitterActivity(APIView):
@@ -50,7 +97,9 @@ class TwitterActivity(APIView):
             for tweet in data.get("tweet_create_events"):
                 user_id = tweet.get("user").get("id_str")
 
-                if user_id == settings.USER_ID:
+                twitter_auth = TwitterAuthKey.objects.all()[0]
+
+                if user_id == twitter_auth.user_id:
                     print("User mentioned self. Avoiding tweet")
                     return Response({"message": "Self mention"}, status.HTTP_200_OK)
 
@@ -109,7 +158,7 @@ class TwitterActivity(APIView):
                 # Post tweet
                 auth = tweepy.OAuth1UserHandler(
                     settings.CONSUMER_KEY, settings.CONSUMER_SECRET,
-                    settings.ACCESS_TOKEN, settings.ACCESS_SECRET
+                    twitter_auth.access_key, twitter_auth.access_secret
                 )
 
                 API(auth).update_status(
