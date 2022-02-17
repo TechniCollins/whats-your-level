@@ -48,7 +48,7 @@ class TwitterActivity(APIView):
 
         if data.get("user_has_blocked") is not None:
             for tweet in data.get("tweet_create_events"):
-                user_id = tweet.get("user").get("id")
+                user_id = tweet.get("user").get("id_str")
 
                 if user_id == settings.USER_ID:
                     print("User mentioned self. Avoiding tweet")
