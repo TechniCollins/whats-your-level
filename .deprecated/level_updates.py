@@ -25,7 +25,7 @@ level5.save()
 
 
 level6 = Level.objects.get(id=6)
-level6.message="A 6? \"username gotta pump those numbers up. Those are rookie numbers in this racket.\" - Mark Hana (@McConaughey)"
+level6.message="A 6? \"username gotta pump those numbers up. Those are rookie numbers in this racket.\" - Mark Hana"
 level6.save()
 
 

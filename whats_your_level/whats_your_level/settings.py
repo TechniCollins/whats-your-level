@@ -150,6 +150,5 @@ CONSUMER_KEY = os.environ.get("CONSUMER_KEY")
 CONSUMER_SECRET = os.environ.get("CONSUMER_SECRET")
 ACCESS_TOKEN = os.environ.get("ACCESS_TOKEN")
 ACCESS_SECRET = os.environ.get("ACCESS_SECRET")
-
-WEBHOOK_URL = os.environ.get("WEBHOOK_URL", "https://127.0.0.1:8000/activity")
+USER_ID = os.environ.get("USER_ID")
 DEV_ENV = os.environ.get("DEV_ENV", "production")

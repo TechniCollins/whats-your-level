@@ -48,6 +48,12 @@ class TwitterActivity(APIView):
 
         if data.get("user_has_blocked") is not None:
             for tweet in data.get("tweet_create_events"):
+                user_id = tweet.get("user").get("id")
+
+                if user_id == settings.USER_ID:
+                    print("User mentioned self. Avoiding tweet")
+                    return Response({"message": "Self mention"}, status.HTTP_200_OK)
+
                 tweet_id = tweet.get("id")
                 text = tweet.get("text")
                 username = tweet.get("user").get("screen_name")
@@ -106,12 +112,10 @@ class TwitterActivity(APIView):
                     settings.ACCESS_TOKEN, settings.ACCESS_SECRET
                 )
 
-                post_tweet = API(auth).update_status(
-                    status=tweet_text,
-                    in_reply_to_status_id=tweet_id
-                )
-
-                print(post_tweet)
+                # API(auth).update_status(
+                #     status=tweet_text,
+                #     in_reply_to_status_id=tweet_id
+                # )
 
                 Mention(
                     level=level,
