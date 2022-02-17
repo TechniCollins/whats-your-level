@@ -112,10 +112,10 @@ class TwitterActivity(APIView):
                     settings.ACCESS_TOKEN, settings.ACCESS_SECRET
                 )
 
-                # API(auth).update_status(
-                #     status=tweet_text,
-                #     in_reply_to_status_id=tweet_id
-                # )
+                API(auth).update_status(
+                    status=tweet_text,
+                    in_reply_to_status_id=tweet_id
+                )
 
                 Mention(
                     level=level,
