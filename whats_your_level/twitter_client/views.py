@@ -32,10 +32,12 @@ class TwitterAuth(APIView):
     )
 
     def get(self, request):
+        auth = self.auth
+
         if "authenticate" in request.GET:
             # Get redirect URL
             try:
-                redirect_url = self.auth.get_authorization_url()
+                redirect_url = auth.get_authorization_url()
                 return Response({"url": redirect_url}, status.HTTP_200_OK)
             except tweepy.TweepyException as e:
                 return Response({"message": str(e)}, status.HTTP_500_INTERNAL_SERVER_ERROR)
@@ -44,9 +46,9 @@ class TwitterAuth(APIView):
                 auth_token = request.GET['oauth_token']
                 verifier = request.GET['oauth_verifier']
 
-                self.auth.request_token = {'oauth_token': auth_token, 'oauth_token_secret': verifier}
+                auth.request_token = {'oauth_token': auth_token, 'oauth_token_secret': verifier}
 
-                access_keys = self.auth.get_access_token(verifier)
+                access_keys = auth.get_access_token(verifier)
 
                 # Get user id and save credentials
                 TwitterAuthKey.objects.all().delete()
@@ -55,14 +57,14 @@ class TwitterAuth(APIView):
                     access_secret=access_keys[1]
                 )
 
-                self.auth.set_access_token(auth_instance.access_key, auth_instance.access_secret)
-                user_details = API(self.auth, wait_on_rate_limit=True).verify_credentials()                
+                auth.set_access_token(auth_instance.access_key, auth_instance.access_secret)
+                user_details = API(auth, wait_on_rate_limit=True).verify_credentials()                
                 auth_instance.user_id = str(user_details.id)
                 auth_instance.save()
 
 
                 # Subscribe to this user's activity
-                subscription = API(self.auth, wait_on_rate_limit=True).subscribeToUser()
+                subscription = API(auth, wait_on_rate_limit=True).subscribeToUser()
                 print(subscription)
 
                 return Response({"message": "Subscribed to user"}, status.HTTP_200_OK)
