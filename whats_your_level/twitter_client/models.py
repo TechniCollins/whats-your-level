@@ -1,5 +1,13 @@
 from django.db import models
 
+class TwitterAuthKey(models.Model):
+    user_id = models.CharField(max_length=100)
+    access_key = models.CharField(max_length=400)
+    access_secret = models.CharField(max_length=400)
+
+    class Meta:
+        db_table = "authkey"
+
 
 class Level(models.Model):
     level = models.IntegerField()

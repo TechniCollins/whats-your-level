@@ -148,8 +148,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Twitter Dev Configs
 CONSUMER_KEY = os.environ.get("CONSUMER_KEY")
 CONSUMER_SECRET = os.environ.get("CONSUMER_SECRET")
+DEV_ENV = os.environ.get("DEV_ENV")
+CALLBACK_URL = os.environ.get("CALLBACK_URL")
 ACCESS_TOKEN = os.environ.get("ACCESS_TOKEN")
 ACCESS_SECRET = os.environ.get("ACCESS_SECRET")
-
-WEBHOOK_URL = os.environ.get("WEBHOOK_URL", "https://127.0.0.1:8000/activity")
-DEV_ENV = os.environ.get("DEV_ENV", "production")
