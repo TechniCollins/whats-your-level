@@ -118,13 +118,19 @@ class TwitterActivity(APIView):
                 level = int(level.group(0))
 
                 # Get at most 3 people who tweeted the same level today
-                tags = list(
-                    Mention.objects.filter(
+                tags = Mention.objects.filter(
                         level=level,
                         tweet_date__gte=timezone.now().replace(hour=0, minute=0, second=0),
                         tweet_date__lte=timezone.now().replace(hour=23, minute=59, second=59)
-                    ).exclude(handle=username).values_list("handle", flat=True).distinct()[:3]
-                )
+                ).exclude(handle=username).order_by("-id") # .distinct("handle")[:3]
+
+                # order by and distinct don't go well together and won't work in our case;
+                # https://docs.djangoproject.com/en/4.0/ref/models/querysets/#django.db.models.query.QuerySet.distinct
+                # so we'll have to eliminate duplicates using python code. Python sets won't work either because
+                # they won't maintain order (which we need to avoid mentioning the same 3 users throughout the day)
+                # For now, we'll get all users who tweeted within the day. As long as this number is in the hundreds,
+                # performance won't be an issue. Response will still be sent within a second or two
+                mentions = list(dict.fromkeys([f"@{x.handle}, " for x in tags]))[:3] #https://stackoverflow.com/a/17016257/9366954
 
                 # Get music for the given level
                 music = Music.objects.filter(level__level=level).prefetch_related("level")
@@ -138,12 +144,12 @@ class TwitterActivity(APIView):
                 message = music[randint(0,n-1)]
 
                 # Check number of mentions at level x
-                m = len(tags)
+                m = len(mentions)
 
                 tag_text = ""
 
                 if m:
-                    tag_text = tag_text.join([f"@{x}, " for x in tags])
+                    tag_text = tag_text.join(mentions)
 
                 if tag_text != "" and m==1:
                     tag_text = f"Also meet {tag_text} who was at {message.level.level} today."
