@@ -110,12 +110,19 @@ class TwitterActivity(APIView):
                 username = tweet.get("user").get("screen_name")
                 tweet_date = datetime.strptime(tweet.get('created_at'), "%a %b %d %H:%M:%S %z %Y").replace(tzinfo=timezone.utc)
 
-                level = re.search(r"10|[1-9]", text)
+                level = re.search(r" 10\W| [1-9]\W", text)
+                # Whitespace followed by a 10, followed by a non-alphanumeric character
+                # Or a whitespace followed by any number between 1 and 9, followed by
+                # a non-alphanumeric character.
 
                 if not level:
                     return Response({"message": "No Level"}, status.HTTP_200_OK)
 
-                level = int(level.group(0))
+                level = int(
+                    re.sub(r"\D", "", level.group(0))
+                )
+                # Replace non-numeric characters, like punctuations and emojis with blank string
+                # To avoid conversion errors
 
                 # Get at most 3 people who tweeted the same level today
                 tags = Mention.objects.filter(

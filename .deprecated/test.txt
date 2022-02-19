@@ -1,3 +1,16 @@
 curl -H 'Content-Type: application/json' -H 'Accept: application/json' -X POST http://127.0.0.1:8000/api/activity -d '{"user_has_blocked": "yes", "tweet_create_events": [{"created_at": "Wed Feb 18 12:05:15 +0000 2022", "text": "At a 1 today @WhatsYourLevel","id": "1493920410123091971", "user": {"id_str": "1084028173082419200", "screen_name": "TechniCollins"}}]}'
 
-curl -H 'Content-Type: application/json' -H 'Accept: application/json' -X POST http://127.0.0.1:8000/api/activity -d '{"user_has_blocked": "yes", "tweet_create_events": [{"created_at": "Wed Feb 18 05:05:15 +0000 2022", "text": "At a 1 today @WhatsYourLevel","id": "1493920410123091971", "user": {"screen_name": "SoftLeverTech"}}]}'
+curl -H 'Content-Type: application/json' -H 'Accept: application/json' -X POST http://127.0.0.1:8000/api/activity -d '{"user_has_blocked": "yes", "tweet_create_events": [{"created_at": "Wed Feb 18 05:05:15 +0000 2022", "text": "@tonylongo1 I am at a 10! @WhatsYourLevel?","id": "1493920410123091971", "user": {"screen_name": "SoftLeverTech"}}]}'
+
+curl -H 'Content-Type: application/json' -H 'Accept: application/json' -X POST http://127.0.0.1:8000/api/activity -d '{"user_has_blocked": "yes", "tweet_create_events": [{"created_at": "Wed Feb 18 05:05:15 +0000 2022", "text": "@WhatsYourLevel I am a 2!","id": "1493920410123091971", "user": {"screen_name": "SoftLeverTech"}}]}'
+
+curl -H 'Content-Type: application/json' -H 'Accept: application/json' -X POST http://127.0.0.1:8000/api/activity -d '{"user_has_blocked": "yes", "tweet_create_events": [{"created_at": "Wed Feb 18 05:05:15 +0000 2022", "text": "I have 69 unsolved problems... I am a 2 today @WhatsYourLevel","id": "1493920410123091971", "user": {"screen_name": "SoftLeverTech"}}]}'
+
+curl -H 'Content-Type: application/json' -H 'Accept: application/json' -X POST http://127.0.0.1:8000/api/activity -d '{"user_has_blocked": "yes", "tweet_create_events": [{"created_at": "Wed Feb 18 05:05:15 +0000 2022", "text": "I need 30000 dollars for my tuition fee and have no clue where to start, I am a 2 @WhatsYourLevel?","id": "1493920410123091971", "user": {"screen_name": "SoftLeverTech"}}]}'
+
+curl -H 'Content-Type: application/json' -H 'Accept: application/json' -X POST http://127.0.0.1:8000/api/activity -d '{"user_has_blocked": "yes", "tweet_create_events": [{"created_at": "Wed Feb 18 05:05:15 +0000 2022", "text": "I just listened to 7up by boy in space. Thanks @WhatsYourLevel","id": "1493920410123091971", "user": {"screen_name": "SoftLeverTech"}}]}'
+
+curl -H 'Content-Type: application/json' -H 'Accept: application/json' -X POST http://127.0.0.1:8000/api/activity -d '{"user_has_blocked": "yes", "tweet_create_events": [{"created_at": "Wed Feb 18 05:05:15 +0000 2022", "text": "I am a 2🥲 @WhatsYourLevel","id": "1493920410123091971", "user": {"screen_name": "SoftLeverTech"}}]}'
+
+curl -H 'Content-Type: application/json' -H 'Accept: application/json' -X POST http://127.0.0.1:8000/api/activity -d '{"user_has_blocked": "yes", "tweet_create_events": [{"created_at": "Wed Feb 18 05:05:15 +0000 2022", "text": "I am a 200 @WhatsYourLevel","id": "1493920410123091971", "user": {"screen_name": "SoftLeverTech"}}]}'
+
