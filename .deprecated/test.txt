@@ -14,3 +14,11 @@ curl -H 'Content-Type: application/json' -H 'Accept: application/json' -X POST h
 
 curl -H 'Content-Type: application/json' -H 'Accept: application/json' -X POST http://127.0.0.1:8000/api/activity -d '{"user_has_blocked": "yes", "tweet_create_events": [{"created_at": "Wed Feb 18 05:05:15 +0000 2022", "text": "I am a 200 @WhatsYourLevel","id": "1493920410123091971", "user": {"screen_name": "SoftLeverTech"}}]}'
 
+curl -H 'Content-Type: application/json' -H 'Accept: application/json' -X POST http://127.0.0.1:8000/api/activity -d '{"user_has_blocked": "yes", "tweet_create_events": [{"created_at": "Wed Feb 18 05:05:15 +0000 2022", "text": "2 @WhatsYourLevel.","id": "1493920410123091971", "user": {"screen_name": "SoftLeverTech"}}]}'
+
+curl -H 'Content-Type: application/json' -H 'Accept: application/json' -X POST http://127.0.0.1:8000/api/activity -d '{"user_has_blocked": "yes", "tweet_create_events": [{"created_at": "Wed Feb 18 05:05:15 +0000 2022", "text": "10 @WhatsYourLevel.","id": "1493920410123091971", "user": {"screen_name": "SoftLeverTech"}}]}'
+
+curl -H 'Content-Type: application/json' -H 'Accept: application/json' -X POST http://127.0.0.1:8000/api/activity -d '{"user_has_blocked": "yes", "tweet_create_events": [{"created_at": "Wed Feb 18 05:05:15 +0000 2022", "text": "@WhatsYourLevel up early, cold, dark , wind…call it a 6","id": "1493920410123091971", "user": {"screen_name": "SoftLeverTech"}}]}'
+
+curl -H 'Content-Type: application/json' -H 'Accept: application/json' -X POST http://127.0.0.1:8000/api/activity -d '{"user_has_blocked": "yes", "tweet_create_events": [{"created_at": "Wed Feb 18 05:05:15 +0000 2022", "text": "@WhatsYourLevel 10","id": "1493920410123091971", "user": {"screen_name": "SoftLeverTech"}}]}'
+

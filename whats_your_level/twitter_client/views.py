@@ -110,10 +110,14 @@ class TwitterActivity(APIView):
                 username = tweet.get("user").get("screen_name")
                 tweet_date = datetime.strptime(tweet.get('created_at'), "%a %b %d %H:%M:%S %z %Y").replace(tzinfo=timezone.utc)
 
-                level = re.search(r" 10\W| [1-9]\W", text)
-                # Whitespace followed by a 10, followed by a non-alphanumeric character
-                # Or a whitespace followed by any number between 1 and 9, followed by
-                # a non-alphanumeric character.
+                level = re.search(r" 10\W| [1-9]\W|^[1-9] |^10 | [1-9]$| 10$", text)
+                # MATCH:
+                # 1. A whitespace followed by a 10, followed by a non-alphanumeric character
+                # 2. A whitespace followed by any number between 1 and 9, followed by a non-alphanumeric character
+                # 3. A number between 1 and 9 at the beginning followed by a space
+                # 4. A 10 at the beginning followed by a space
+                # 5. A number between 1 and 9 at the end with a preceeding space
+                # 6. A 10 at the end with a preceeding space
 
                 if not level:
                     return Response({"message": "No Level"}, status.HTTP_200_OK)
